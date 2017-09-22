@@ -1,0 +1,23 @@
+//
+//  SwapSpace-Prefix.pch
+//  SwapSpace
+//
+//  Created by zzy on 24/08/2017.
+//  Copyright © 2017 lanmao. All rights reserved.
+//
+
+#ifndef SwapSpace_Prefix_pch
+#define SwapSpace_Prefix_pch
+
+#import "UIView+Frame.h"
+#import "Config.h"
+#import <AFNetworking.h>
+#import <SVProgressHUD.h>
+#import <MJExtension.h>
+#import "MJRefresh.h"
+#import <MBProgressHUD.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIColor+String.h"
+#import "ImplDefine.h"
+
+#endif /* SwapSpace_Prefix_pch */

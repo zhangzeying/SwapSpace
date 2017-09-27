@@ -169,6 +169,7 @@
         
         [[CommUtils sharedInstance] removeUserId];
         [[CommUtils sharedInstance] removeUserName];
+        [ShareSDK cancelAuthorize:SSDKPlatformSubTypeQZone];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

@@ -44,4 +44,8 @@
 - (void)saveCityName:(NSString *)cityName;
 
 - (NSMutableArray *)getMyStickPostCache;
+
+// 为了增加UUID获取的成功率。一旦获取成功，就保存到本地，取的时候，先取本地，本地没有再去第三方库中取。
+- (NSString *)fetchUUID;
+- (void)saveUUID:(NSString *)UUID;
 @end

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		58B32BBA10065F7B4D6A0C55 /* libPods-SwapSpace.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B321D6BA47F23A3F4EAC190C /* libPods-SwapSpace.a */; };
+		5A05CF7F1F77599C009103B7 /* StatictisService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A05CF7E1F77599C009103B7 /* StatictisService.m */; };
+		5A05CF841F775C40009103B7 /* KeychainAccessGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A05CF831F775C40009103B7 /* KeychainAccessGroups.plist */; };
+		5A05CF8C1F77612F009103B7 /* SvUDIDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A05CF8B1F776045009103B7 /* SvUDIDTools.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5A2759B21F5B062B000CE7F7 /* PostTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2759B11F5B062B000CE7F7 /* PostTableCell.m */; };
 		5A2759B51F5B987E000CE7F7 /* ContentDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2759B41F5B987E000CE7F7 /* ContentDetailModel.m */; };
 		5A2759C51F5BC491000CE7F7 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2759C41F5BC491000CE7F7 /* LoadingView.m */; };
@@ -101,6 +104,11 @@
 
 /* Begin PBXFileReference section */
 		246547EB0AECECD6491F28F3 /* Pods-SwapSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwapSpace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwapSpace/Pods-SwapSpace.debug.xcconfig"; sourceTree = "<group>"; };
+		5A05CF7D1F77599C009103B7 /* StatictisService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatictisService.h; sourceTree = "<group>"; };
+		5A05CF7E1F77599C009103B7 /* StatictisService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatictisService.m; sourceTree = "<group>"; };
+		5A05CF831F775C40009103B7 /* KeychainAccessGroups.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KeychainAccessGroups.plist; sourceTree = "<group>"; };
+		5A05CF8A1F776045009103B7 /* SvUDIDTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SvUDIDTools.h; sourceTree = "<group>"; };
+		5A05CF8B1F776045009103B7 /* SvUDIDTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SvUDIDTools.m; sourceTree = "<group>"; };
 		5A2759B01F5B062B000CE7F7 /* PostTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTableCell.h; sourceTree = "<group>"; };
 		5A2759B11F5B062B000CE7F7 /* PostTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostTableCell.m; sourceTree = "<group>"; };
 		5A2759B31F5B987E000CE7F7 /* ContentDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentDetailModel.h; sourceTree = "<group>"; };
@@ -286,6 +294,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5A05CF891F77603D009103B7 /* UDIDTools */ = {
+			isa = PBXGroup;
+			children = (
+				5A05CF8A1F776045009103B7 /* SvUDIDTools.h */,
+				5A05CF8B1F776045009103B7 /* SvUDIDTools.m */,
+			);
+			path = UDIDTools;
+			sourceTree = "<group>";
+		};
 		5A2759C61F5C0205000CE7F7 /* HZPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +366,7 @@
 				5A7F94AC1F4F07E3007CB80E /* AppDelegate.m */,
 				5A7F94A91F4F07E3007CB80E /* main.m */,
 				5A7F94F31F4F0B1F007CB80E /* SwapSpace-Prefix.pch */,
+				5A05CF831F775C40009103B7 /* KeychainAccessGroups.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -450,6 +468,7 @@
 		5A7F94E01F4F0845007CB80E /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				5A05CF891F77603D009103B7 /* UDIDTools */,
 				5AF6CFA31F5C5D28005801EF /* ShareSDK */,
 				5A2759C61F5C0205000CE7F7 /* HZPhotoBrowser */,
 				5ABCBFA51F510FA400BCA4F7 /* TLCityPicker */,
@@ -512,6 +531,8 @@
 				5AF6CFA11F5C5BE8005801EF /* PersonalService.m */,
 				5AEC36721F67C2A00079D3FD /* AppVersionService.h */,
 				5AEC36731F67C2A00079D3FD /* AppVersionService.m */,
+				5A05CF7D1F77599C009103B7 /* StatictisService.h */,
+				5A05CF7E1F77599C009103B7 /* StatictisService.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -743,6 +764,7 @@
 				5AF6CFBD1F5C5D28005801EF /* ShareSDKUI.bundle in Resources */,
 				5AF6CFBA1F5C5D28005801EF /* ShareSDKConfigFile.bundle in Resources */,
 				5A2759D21F5C0205000CE7F7 /* whiteplaceholder.png in Resources */,
+				5A05CF841F775C40009103B7 /* KeychainAccessGroups.plist in Resources */,
 				5A7F94B51F4F07E3007CB80E /* Assets.xcassets in Resources */,
 				5AF6CFC21F5C5D28005801EF /* ShareSDK.bundle in Resources */,
 				5ABCBFB21F510FA400BCA4F7 /* CityData.plist in Resources */,
@@ -819,6 +841,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A05CF8C1F77612F009103B7 /* SvUDIDTools.m in Sources */,
 				5A6EDDBE1F5D8D2F000E3421 /* LoginViewController.m in Sources */,
 				5A96CACD1F666857001A8029 /* SelectAreaMenu.m in Sources */,
 				5AC31AC21F526F5B00FFEA4C /* PostViewController.m in Sources */,
@@ -857,6 +880,7 @@
 				5A2759D11F5C0205000CE7F7 /* HZPhotoBrowserView.m in Sources */,
 				5A7F94AA1F4F07E3007CB80E /* main.m in Sources */,
 				5A8CE7151F604052003A4E7B /* PostPhotoWall.m in Sources */,
+				5A05CF7F1F77599C009103B7 /* StatictisService.m in Sources */,
 				5A4D5A341F618E3100A2A244 /* PhotoImageView.m in Sources */,
 				5A914A801F58449E00C04D30 /* CircleView.m in Sources */,
 				5AC1A9FB1F57032D0009F205 /* ContentDetailViewController.m in Sources */,
@@ -1008,6 +1032,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "/Users/zzy/Documents/App/客户项目/SwapSpace/SwapSpace/KeychainAccessGroups.plist";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JFM83WFZ9J;
 				ENABLE_BITCODE = NO;
@@ -1036,6 +1061,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "/Users/zzy/Documents/App/客户项目/SwapSpace/SwapSpace/KeychainAccessGroups.plist";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JFM83WFZ9J;
 				ENABLE_BITCODE = NO;

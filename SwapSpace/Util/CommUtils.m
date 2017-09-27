@@ -15,6 +15,19 @@
     dispatch_once(&pred, ^{ instance = [[self alloc] init]; });
     return instance;
 }
+
+// 为了增加UUID获取的成功率。一旦获取成功，就保存到本地，取的时候，先取本地，本地没有再去第三方库中取。
+- (NSString *)fetchUUID {
+    NSUserDefaults *setting = [NSUserDefaults standardUserDefaults];
+    return [setting stringForKey:@"UserDefaultsUUID"];
+}
+
+- (void)saveUUID:(NSString *)UUID {
+    NSUserDefaults *setting = [NSUserDefaults standardUserDefaults];
+    [setting setObject:UUID forKey:@"UserDefaultsUUID"];
+    [setting synchronize];
+}
+
 /**
  * 获取userId
  */

@@ -34,4 +34,6 @@
 #define kAPIPost @"http://211.159.169.193:8080/cbg/post/insertPost"
 //获取app版本号
 #define kAPIAppVersion @"/post/getAppVersion"
+//app打开次数统计
+#define kAPIActivation @"/count/activationCount"
 #endif /* ImplDefine_h */

@@ -18,6 +18,7 @@
 #import "CommUtils.h"
 #import "AdViewController.h"
 #import "AppVersionService.h"
+#import "StatictisService.h"
 @interface AppDelegate ()<BMKGeneralDelegate>
 {
     BMKMapManager* _mapManager;
@@ -36,7 +37,7 @@
     [SVProgressHUD setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.8]];
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
     [AppVersionService getAppVersion];
-    
+    [StatictisService statictisForActivation];
     NSMutableArray *array = [[CommUtils sharedInstance] getMyStickPostCache];
     NSMutableArray *tempArr = array.mutableCopy;
     for (NSDictionary *dict in tempArr) {

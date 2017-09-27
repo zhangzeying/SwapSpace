@@ -62,6 +62,8 @@
 		5AC31AD31F52CB8900FFEA4C /* CustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC31AD21F52CB8900FFEA4C /* CustomTextView.m */; };
 		5AC31B1F1F52FB4600FFEA4C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC31B1E1F52FB4600FFEA4C /* SearchViewController.m */; };
 		5AC31B221F530D9E00FFEA4C /* RestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC31B211F530D9E00FFEA4C /* RestService.m */; };
+		5AD612FF1F7B93AB0023CD9E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD612FE1F7B92D20023CD9E /* SVProgressHUD.m */; };
+		5AD613001F7B93B80023CD9E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5AD612FC1F7B92D20023CD9E /* SVProgressHUD.bundle */; };
 		5AE093F91F5C45B7000EDE4D /* PersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE093F81F5C45B7000EDE4D /* PersonalCenterViewController.m */; };
 		5AEC36741F67C2A00079D3FD /* AppVersionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC36731F67C2A00079D3FD /* AppVersionService.m */; };
 		5AF6CFA21F5C5BE8005801EF /* PersonalService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF6CFA11F5C5BE8005801EF /* PersonalService.m */; };
@@ -213,6 +215,10 @@
 		5AC31B1E1F52FB4600FFEA4C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		5AC31B201F530D9E00FFEA4C /* RestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestService.h; sourceTree = "<group>"; };
 		5AC31B211F530D9E00FFEA4C /* RestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestService.m; sourceTree = "<group>"; };
+		5AD612FB1F7B92D20023CD9E /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		5AD612FC1F7B92D20023CD9E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		5AD612FD1F7B92D20023CD9E /* SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		5AD612FE1F7B92D20023CD9E /* SVProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		5AE093F71F5C45B7000EDE4D /* PersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterViewController.h; sourceTree = "<group>"; };
 		5AE093F81F5C45B7000EDE4D /* PersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterViewController.m; sourceTree = "<group>"; };
 		5AEC36721F67C2A00079D3FD /* AppVersionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersionService.h; sourceTree = "<group>"; };
@@ -468,6 +474,7 @@
 		5A7F94E01F4F0845007CB80E /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				5AD612FA1F7B92D20023CD9E /* SVProgressHUD */,
 				5A05CF891F77603D009103B7 /* UDIDTools */,
 				5AF6CFA31F5C5D28005801EF /* ShareSDK */,
 				5A2759C61F5C0205000CE7F7 /* HZPhotoBrowser */,
@@ -554,6 +561,17 @@
 				5ABCBFB11F510FA400BCA4F7 /* TLCityPickerSearchResultController.m */,
 			);
 			path = TLCityPicker;
+			sourceTree = "<group>";
+		};
+		5AD612FA1F7B92D20023CD9E /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				5AD612FB1F7B92D20023CD9E /* SVProgressHUD-Prefix.pch */,
+				5AD612FC1F7B92D20023CD9E /* SVProgressHUD.bundle */,
+				5AD612FD1F7B92D20023CD9E /* SVProgressHUD.h */,
+				5AD612FE1F7B92D20023CD9E /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		5AF6CFA31F5C5D28005801EF /* ShareSDK */ = {
@@ -758,6 +776,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD613001F7B93B80023CD9E /* SVProgressHUD.bundle in Resources */,
 				5AF6CFC11F5C5D28005801EF /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				5AC31AC31F526F5B00FFEA4C /* PostViewController.xib in Resources */,
 				5A7F94B81F4F07E3007CB80E /* LaunchScreen.storyboard in Resources */,
@@ -841,6 +860,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD612FF1F7B93AB0023CD9E /* SVProgressHUD.m in Sources */,
 				5A05CF8C1F77612F009103B7 /* SvUDIDTools.m in Sources */,
 				5A6EDDBE1F5D8D2F000E3421 /* LoginViewController.m in Sources */,
 				5A96CACD1F666857001A8029 /* SelectAreaMenu.m in Sources */,

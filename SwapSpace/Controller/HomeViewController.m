@@ -209,7 +209,7 @@
 
     if (self.searchBar.text.length == 0) {
         
-        [SVProgressHUD showErrorWithStatus:@"搜索关键字不能为空！" maskType:SVProgressHUDMaskTypeBlack];
+        [SVProgressHUD showErrorWithStatus:@"搜索关键字不能为空！"];
         return;
     }
     SearchViewController *searchVC = [[SearchViewController alloc]init];

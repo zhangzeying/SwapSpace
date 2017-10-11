@@ -7,8 +7,8 @@
 //
 
 #import "BaseViewController.h"
-
+@class ContentModel;
 @interface ContentDetailViewController : BaseViewController
 /** <##> */
-@property(nonatomic,copy)NSString *postId;
+@property(nonatomic,strong)ContentModel *contentModel;
 @end

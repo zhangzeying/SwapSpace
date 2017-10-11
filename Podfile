@@ -8,4 +8,5 @@ pod 'SDCycleScrollView'
 pod 'BaiduMapKit' #百度地图SDK
 pod 'TZImagePickerController'
 pod 'IQKeyboardManager'
+pod 'SVProgressHUD','1.1.3'
 end

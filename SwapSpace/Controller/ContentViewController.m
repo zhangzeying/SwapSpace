@@ -149,12 +149,21 @@
     self.pageIndex = 1;
     
     [self loadData:YES showLoading:YES];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reportSuccess:) name:@"ReportSuccess" object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     
     [super viewWillDisappear:animated];
     [self.searchBar resignFirstResponder];
+}
+
+- (void)reportSuccess:(NSNotification *)sender {
+    
+    ContentModel *model = (ContentModel *)sender.object;
+    [self.dataArr removeObject:model];
+    [self.table reloadData];
 }
 
 /**
@@ -346,7 +355,7 @@
 
     ContentModel *model = self.dataArr[indexPath.row];
     ContentDetailViewController *contentDetailVC = [[ContentDetailViewController alloc]init];
-    contentDetailVC.postId = model.pid;
+    contentDetailVC.contentModel = model;
     [self.navigationController pushViewController:contentDetailVC animated:YES];
 }
 

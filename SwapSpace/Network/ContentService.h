@@ -28,7 +28,7 @@
 /**
  * 举报
  */
-+ (void)report:(NSDictionary *)params completion:(void(^)(id))completion;
++ (void)report:(NSDictionary *)params completion:(void(^)())completion;
 /**
  * 发帖
  */

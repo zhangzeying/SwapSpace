@@ -222,7 +222,7 @@
     
     ContentModel *model = self.dataArr[indexPath.row];
     ContentDetailViewController *contentDetailVC = [[ContentDetailViewController alloc]init];
-    contentDetailVC.postId = model.pid;
+    contentDetailVC.contentModel = model;
     [self.navigationController pushViewController:contentDetailVC animated:YES];
 }
 

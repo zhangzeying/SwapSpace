@@ -131,7 +131,7 @@
 /**
  * 举报
  */
-+ (void)report:(NSDictionary *)params completion:(void(^)(id))completion {
++ (void)report:(NSDictionary *)params completion:(void(^)())completion {
     
     [[RestService sharedService] afnetworkingPost:kAPIReport responseType:Json parameters:params completion:^(id myAfNetBlokResponeDic, BOOL flag) {
         if (flag) {
@@ -139,6 +139,7 @@
             NSDictionary *dict = myAfNetBlokResponeDic;
             if ([dict[@"resultCode"] isEqualToString:@"1"]) {
                 [SVProgressHUD showSuccessWithStatus:@"举报成功！"];
+                completion();
             } else if ([dict[@"resultCode"] isEqualToString:@"2"]){
                 [SVProgressHUD showErrorWithStatus:@"不能重复举报！"];
             } else {

@@ -8,6 +8,7 @@
 
 #import "ContentDetailViewController.h"
 #import "ContentService.h"
+#import "ContentModel.h"
 #import "ContentDetailModel.h"
 #import "SDCycleScrollView.h"
 #import "HZPhotoBrowser.h"
@@ -168,7 +169,7 @@
 
 - (void)loadData {
 
-    NSDictionary *dict = @{@"pid":self.postId};
+    NSDictionary *dict = @{@"pid":self.contentModel.pid};
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
     if (!error) {
@@ -242,16 +243,8 @@
 
 - (void)reportClick {
 
-    if ([[CommUtils sharedInstance] fetchUserId].length > 0) {//已登录
-        
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"确定举报吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        [alert show];
-        
-    } else { //未登录
-        
-        LoginViewController *loginVC = [[LoginViewController alloc]init];
-        [self.navigationController pushViewController:loginVC animated:YES];
-    }
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"确定举报吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
     
 }
 
@@ -264,12 +257,11 @@
     
     if (buttonIndex == 1) {
         
-        NSDictionary *dict = @{@"pid":self.model.pid,
-                               @"userId":[[CommUtils sharedInstance] fetchUserId]?:@""
-                               };
-        [ContentService report:dict completion:^(NSString *str) {
+        NSDictionary *dict = @{@"pid":self.model.pid};
+                               
+        [ContentService report:dict completion:^() {
             
-            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ReportSuccess" object:self.contentModel];
         }];
     }
 }

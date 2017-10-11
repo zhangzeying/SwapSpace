@@ -135,16 +135,8 @@ static NSString *ID = @"TableCell";
 
 - (void)reportClick {
     
-    if ([[CommUtils sharedInstance] fetchUserId].length > 0) {//已登录
-        
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"确定举报吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        [alert show];
-        
-    } else { //未登录
-        
-        LoginViewController *loginVC = [[LoginViewController alloc]init];
-        [self.vc.navigationController pushViewController:loginVC animated:YES];
-    }
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"确定举报吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
     
 }
 
@@ -152,12 +144,11 @@ static NSString *ID = @"TableCell";
     
     if (buttonIndex == 1) {
         
-        NSDictionary *dict = @{@"pid":self.model.pid,
-                               @"userId":[[CommUtils sharedInstance] fetchUserId]?:@""
-                               };
-        [ContentService report:dict completion:^(NSString *str) {
+        NSDictionary *dict = @{@"pid":self.model.pid };
+                              
+        [ContentService report:dict completion:^() {
             
-            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ReportSuccess" object:self.model];
         }];
     }
 }

@@ -63,7 +63,7 @@ static NSString *ID = @"TableCell";
         [self addSubview:self.browseCountLbl];
         
         self.reportBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.reportBtn setTitle:@"举报中介，两次删帖" forState:UIControlStateNormal];
+        [self.reportBtn setTitle:@"举报中介，一次删帖" forState:UIControlStateNormal];
         [self.reportBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         self.reportBtn.titleLabel.font = [UIFont systemFontOfSize:12];
         self.reportBtn.layer.borderColor = [UIColor redColor].CGColor;

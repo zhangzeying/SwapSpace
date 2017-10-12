@@ -19,7 +19,7 @@
 #import "AdViewController.h"
 #import "AppVersionService.h"
 #import "StatictisService.h"
-@interface AppDelegate ()<BMKGeneralDelegate>
+@interface AppDelegate ()<BMKGeneralDelegate,UIAlertViewDelegate>
 {
     BMKMapManager* _mapManager;
 }
@@ -36,7 +36,12 @@
     // 调整SVProgressHUD的背景色和前景色
     [SVProgressHUD setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.8]];
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
-    [AppVersionService getAppVersion];
+    [AppVersionService getAppVersion:^(NSDictionary *dict) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:[NSString stringWithFormat:@"发现新版本 %@",dict[@"version"]] message:dict[@"content"] delegate:self cancelButtonTitle:@"稍后再说" otherButtonTitles:@"立即去更新", nil];
+        [alert show];
+        
+    }];
+
     [StatictisService statictisForActivation];
     NSMutableArray *array = [[CommUtils sharedInstance] getMyStickPostCache];
     NSMutableArray *tempArr = array.mutableCopy;
@@ -75,8 +80,6 @@
     }
 }
 
-
-
 - (void)initShareSDK {
 
     [ShareSDK registerActivePlatforms:@[@(SSDKPlatformTypeQQ)
@@ -107,6 +110,13 @@
                  break;
          }
      }];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/%E7%BD%AE%E6%8D%A2%E7%A9%BA%E9%97%B4/id1282007862?l=zh&ls=1&mt=8"]];
+    }
 }
 
 /**

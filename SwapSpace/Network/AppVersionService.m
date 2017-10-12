@@ -12,7 +12,7 @@
 /**
  * 获取app版本号
  */
-+ (void)getAppVersion {
++ (void)getAppVersion:(void(^)(NSDictionary *dict))completion {
     
     [[RestService sharedService] afnetworkingPost:kAPIAppVersion responseType:Json parameters:nil completion:^(id myAfNetBlokResponeDic, BOOL flag) {
         if (flag) {
@@ -34,13 +34,13 @@
                 }
                 
                 if (hasNewVersion) {
-                    
-                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"升级提示" message:dict[@"content"] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"升级", nil];
-                    [alert show];
+
+                    completion(dict);
                 }
             }
         }
     }];
 }
+
 
 @end

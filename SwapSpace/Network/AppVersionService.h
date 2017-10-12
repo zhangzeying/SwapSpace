@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface AppVersionService : NSObject
-+ (void)getAppVersion;
++ (void)getAppVersion:(void(^)(NSDictionary *dict))completion;
 @end

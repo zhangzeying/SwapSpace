@@ -17,6 +17,7 @@
 #import "CommUtils.h"
 #import "LocationManage.h"
 
+
 @interface HomeViewController ()<TLCityPickerDelegate, UIAlertViewDelegate, UISearchBarDelegate>
 /** <##> */
 @property (nonatomic, weak) UIButton *chooseCityBtn;

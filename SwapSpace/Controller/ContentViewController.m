@@ -94,7 +94,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:publickBtn];
     
     [[UISearchBar appearance] setSearchFieldBackgroundImage:[UIImage imageNamed:@"search_bg"] forState:UIControlStateNormal];
-    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(8, 75, self.view.width - 16, 35)];
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(8, kNavigationPlusStatusHeight+15, self.view.width - 16, 35)];
     searchBar.placeholder = @"搜索关键字或相关地址";
     searchBar.tintColor = [UIColor lightGrayColor];
     UIOffset offect = {5, 0};

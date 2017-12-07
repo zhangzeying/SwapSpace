@@ -37,14 +37,14 @@
     launchView.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:launchView];
     
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] init];
-    activityIndicator.center = launchView.center;
-    activityIndicator.color = [UIColor whiteColor];
-    [launchView addSubview:activityIndicator];
-    [activityIndicator startAnimating];
+//    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] init];
+//    activityIndicator.center = launchView.center;
+//    activityIndicator.color = [UIColor whiteColor];
+//    [launchView addSubview:activityIndicator];
+//    [activityIndicator startAnimating];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
        
-        [activityIndicator stopAnimating];
+//        [activityIndicator stopAnimating];
         [kAppDelegate changeRootVC];
         
     });

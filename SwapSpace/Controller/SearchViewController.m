@@ -51,7 +51,7 @@
     UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [searchBtn setTitle:@"搜索" forState:UIControlStateNormal];
     searchBtn.backgroundColor = [UIColor colorWithHexString:@"fcbc93"];
-    searchBtn.frame = CGRectMake(self.view.width - 20 - 50, 75, 50, 30);
+    searchBtn.frame = CGRectMake(self.view.width - 20 - 50, kNavigationPlusStatusHeight+15, 50, 30);
     searchBtn.layer.cornerRadius = 5;
     searchBtn.layer.masksToBounds = YES;
     searchBtn.titleLabel.font = [UIFont systemFontOfSize:13];

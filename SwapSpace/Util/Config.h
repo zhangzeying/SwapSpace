@@ -41,6 +41,12 @@
 
 #define MyStickFileName @"MyStickFile"
 
+#define kIsIPhoneX ((ScreenW == 375) && (ScreenH == 812))
+#define kIPhoneXBottomAddtion (kIsIPhoneX ? 34 : 0)
+#define kStatusBarHeight (kIsIPhoneX ? 44.0f : 20.0f)
+#define kNavigationBarHeight 44.0f
+#define kNavigationPlusStatusHeight (kStatusBarHeight + kNavigationBarHeight)
+
 #endif /* Config_h */
 
 

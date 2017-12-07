@@ -181,11 +181,8 @@
             self.model = model;
             self.phoneLbl.text = [NSString stringWithFormat:@"%@ : %@",model.contact,model.phone];
             NSMutableArray *photoArr = [NSMutableArray array];
-            NSString *photoPath = [NSString stringWithFormat:@"%@/upload",BaseUrl];
             for (NSDictionary *dict in model.photoArray) {
-                NSString *suffix = dict[@"attachment"][@"suffix"];
-                NSString *photoName = [NSString stringWithFormat:@"%@.%@",dict[@"attachment"][@"name"],suffix];
-                NSString *photoUrl = [NSString stringWithFormat:@"%@/%@",photoPath,photoName];
+                NSString *photoUrl = dict[@"attachment"][@"fullpath"];
                 [photoArr addObject:photoUrl];
             }
             

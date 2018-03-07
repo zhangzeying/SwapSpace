@@ -105,10 +105,10 @@ static NSString *ID = @"TableCell";
     [self.priceLbl sizeToFit];
     self.priceLbl.frame = CGRectMake(self.addressLbl.x, self.addressLbl.bottom + 4, self.priceLbl.width, self.priceLbl.height);
 
-    CGRect titleRect = [self.titleLbl.text boundingRectWithSize:CGSizeMake(self.titleLbl.width, MAXFLOAT)
-                                                        options:NSStringDrawingUsesLineFragmentOrigin
-                                                     attributes:@{NSFontAttributeName: self.titleLbl.font}
-                                                        context:nil];
+        CGRect titleRect = [self.titleLbl.text boundingRectWithSize:CGSizeMake(self.titleLbl.width, MAXFLOAT)
+                                                            options:NSStringDrawingUsesLineFragmentOrigin
+                                                         attributes:@{NSFontAttributeName: self.titleLbl.font}
+                                                            context:nil];
     if (titleRect.size.height == self.titleLbl.font.lineHeight) {
         
         self.titleLbl.height = titleRect.size.height;

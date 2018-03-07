@@ -32,7 +32,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>5</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>timapi</string>
@@ -55,11 +55,17 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>置换空间需要使用您的相机。</string>
+	<string>发帖需要使用您的相机。</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>需要获取您的位置信息将用于在首页左上角显示您所在的城市，如果不允许，将默认显示北京哦~</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>需要获取您的位置信息将用于在首页左上角显示您所在的城市，如果不允许，将默认显示北京哦~</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>置换空间需要使用您的地理位置。</string>
+	<string>需要获取您的位置信息将用于在首页左上角显示您所在的城市，如果不允许，将默认显示北京哦~</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>发帖需要访问您的相册。</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>置换空间需要访问您的相册。</string>
+	<string>发帖需要访问您的相册。</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

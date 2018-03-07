@@ -719,7 +719,7 @@
 					5A7F94A41F4F07E3007CB80E = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = JFM83WFZ9J;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					5A7F94BD1F4F07E3007CB80E = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1034,7 +1034,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "/Users/zzy/Documents/App/客户项目/SwapSpace/SwapSpace/KeychainAccessGroups.plist";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JFM83WFZ9J;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1052,8 +1052,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanmao.swapspace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c1248cf4-9230-4824-98a4-430e1d90f547";
-				PROVISIONING_PROFILE_SPECIFIER = swapspace_dev;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1064,8 +1064,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "/Users/zzy/Documents/App/客户项目/SwapSpace/SwapSpace/KeychainAccessGroups.plist";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JFM83WFZ9J;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1083,8 +1083,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanmao.swapspace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6620d566-f313-4498-92ee-1da46dfb6799";
-				PROVISIONING_PROFILE_SPECIFIER = swapspace_dis;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

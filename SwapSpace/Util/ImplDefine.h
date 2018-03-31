@@ -9,7 +9,7 @@
 #ifndef ImplDefine_h
 #define ImplDefine_h
 
-#define BaseUrl @"http://211.159.169.193:8080/cbg"
+#define BaseUrl @"http://140.143.38.179/cbg"
 //根据搜索关键字和模块查列表
 #define kAPIPostList @"/post/listPostByKey"
 //根据帖子id获取帖子详情
@@ -31,7 +31,7 @@
 //信息搜索页面搜索接口
 #define kAPISearchPostList @"/post/listPostByXYZ"
 //发帖
-#define kAPIPost @"http://211.159.169.193:8080/cbg/post/insertPost"
+#define kAPIPost @"http://140.143.38.179/cbg/post/insertPost"
 //获取app版本号
 #define kAPIAppVersion @"/post/getAppVersion"
 //app打开次数统计

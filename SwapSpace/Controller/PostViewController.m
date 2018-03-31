@@ -18,7 +18,7 @@
 #import "Utils.h"
 #import "CommUtils.h"
 #import "ContentService.h"
-@interface PostViewController ()<TZImagePickerControllerDelegate,PostPhotoWallDelegate, TLCityPickerDelegate,DropDownMenuDelegate>
+@interface PostViewController ()<TZImagePickerControllerDelegate,PostPhotoWallDelegate, TLCityPickerDelegate,DropDownMenuDelegate, UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewHeight;
@@ -281,6 +281,8 @@
 
 - (IBAction)chooseDistrict:(id)sender {
     
+    [self.view endEditing:YES];
+    
     if (self.districtDropDownMenu.menuState == Shrink) {
         
         [self.view addSubview:self.districtDropDownMenu];
@@ -291,9 +293,12 @@
         
         [self.districtDropDownMenu shrink];
     }
+    
 }
 
 - (IBAction)chooseStreet:(id)sender {
+    
+    [self.view endEditing:YES];
     
     if (self.streetDropDownMenu.menuState == Shrink) {
         
@@ -507,6 +512,11 @@
 - (void)cityPickerControllerDidCancel:(TLCityPickerController *)cityPickerViewController
 {
     [cityPickerViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {

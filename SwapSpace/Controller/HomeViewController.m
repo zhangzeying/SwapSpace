@@ -180,22 +180,22 @@
     contentVC.type = self.categoryArr[sender.tag-100];
     switch (sender.tag) {
         case 100:
-            contentVC.subTypeArr = @[@"全部",@"出租",@"出售"];
+            contentVC.subTypeArr = @[@"出租",@"出售"];
             break;
         case 101:
-            contentVC.subTypeArr = @[@"全部",@"汽车",@"其他"];
+            contentVC.subTypeArr = @[@"汽车",@"其他"];
             break;
         case 102:
-            contentVC.subTypeArr = @[@"全部",@"苹果",@"其他"];
+            contentVC.subTypeArr = @[@"苹果",@"其他"];
             break;
         case 103:
-            contentVC.subTypeArr = @[@"全部",@"冰箱",@"洗衣机",@"电视",@"其他"];
+            contentVC.subTypeArr = @[@"冰箱",@"洗衣机",@"电视",@"其他"];
             break;
         case 104:
-            contentVC.subTypeArr = @[@"全部",@"全职",@"兼职"];
+            contentVC.subTypeArr = @[@"全职",@"兼职"];
             break;
         case 105:
-            contentVC.subTypeArr = @[@"全部",@"二手交易"];
+            contentVC.subTypeArr = @[@"二手交易"];
             break;
         default:
             break;

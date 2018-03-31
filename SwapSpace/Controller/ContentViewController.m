@@ -109,7 +109,7 @@
     DropDownButton *typeBtn = [DropDownButton buttonWithType:UIButtonTypeCustom];
     typeBtn.frame = CGRectMake(searchBar.right - 100 - 8, searchBar.bottom+8, 100, 30);
     [typeBtn setImage:[UIImage imageNamed:@"arrow_down"] forState:UIControlStateNormal];
-    [typeBtn setTitle:@"全部" forState:UIControlStateNormal];
+    [typeBtn setTitle:self.subTypeArr[0] forState:UIControlStateNormal];
     typeBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     [typeBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     typeBtn.layer.borderColor = [UIColor colorWithHexString:@"e6e6e6"].CGColor;

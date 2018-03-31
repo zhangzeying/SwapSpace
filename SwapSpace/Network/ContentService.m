@@ -59,7 +59,7 @@
             
             NSString *resultStr = [[NSString alloc] initWithData:myAfNetBlokResponeDic encoding:NSUTF8StringEncoding];
             NSString *jsonStr = [resultStr substringFromIndex:14];
-            jsonStr = [jsonStr substringToIndex:jsonStr.length - 2];
+            jsonStr = [jsonStr substringToIndex:jsonStr.length - 3];
             NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
             NSArray *resultArr = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
             
@@ -113,7 +113,7 @@
             [SVProgressHUD dismiss];
             NSString *resultStr = [[NSString alloc] initWithData:myAfNetBlokResponeDic encoding:NSUTF8StringEncoding];
             NSString *jsonStr = [resultStr substringFromIndex:14];
-            jsonStr = [jsonStr substringToIndex:jsonStr.length - 2];
+            jsonStr = [jsonStr substringToIndex:jsonStr.length - 3];
             NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
             NSArray *resultArr = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
             NSArray *modelArr = [ContentModel mj_objectArrayWithKeyValuesArray:resultArr];
@@ -192,10 +192,9 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        [SVProgressHUD dismiss];
         NSString *resultStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSString *jsonStr = [resultStr substringFromIndex:14];
-        jsonStr = [jsonStr substringToIndex:jsonStr.length - 2];
+        jsonStr = [jsonStr substringToIndex:jsonStr.length - 3];
         NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
         NSArray *resultArr = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
         if (resultArr.count > 0) {

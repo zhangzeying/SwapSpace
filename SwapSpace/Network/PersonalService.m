@@ -26,7 +26,7 @@
             
             NSString *resultStr = [[NSString alloc] initWithData:myAfNetBlokResponeDic encoding:NSUTF8StringEncoding];
             NSString *jsonStr = [resultStr substringFromIndex:14];
-            jsonStr = [jsonStr substringToIndex:jsonStr.length - 2];
+            jsonStr = [jsonStr substringToIndex:jsonStr.length - 3];
             NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
             UserModel *model = [UserModel mj_objectWithKeyValues:dict];
@@ -86,7 +86,7 @@
             
             NSString *resultStr = [[NSString alloc] initWithData:myAfNetBlokResponeDic encoding:NSUTF8StringEncoding];
             NSString *jsonStr = [resultStr substringFromIndex:14];
-            jsonStr = [jsonStr substringToIndex:jsonStr.length - 2];
+            jsonStr = [jsonStr substringToIndex:jsonStr.length - 3];
             NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
             NSArray *resultArr = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
             if (resultArr.count > 0) {
@@ -125,7 +125,7 @@
             
             NSString *resultStr = [[NSString alloc] initWithData:myAfNetBlokResponeDic encoding:NSUTF8StringEncoding];
             NSString *jsonStr = [resultStr substringFromIndex:14];
-            jsonStr = [jsonStr substringToIndex:jsonStr.length - 2];
+            jsonStr = [jsonStr substringToIndex:jsonStr.length - 3];
             NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
             NSArray *resultArr = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
             if (resultArr.count > 0) {

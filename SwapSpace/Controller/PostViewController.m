@@ -406,6 +406,7 @@
    
         [ContentService post:jsonStr photoArr:self.selectedPhotoArr completion:^() {
             
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"PostSuccess" object:nil];
             [self.navigationController popViewControllerAnimated:YES];
         }];
     }

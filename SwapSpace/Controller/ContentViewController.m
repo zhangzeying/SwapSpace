@@ -151,6 +151,7 @@
     [self loadData:YES showLoading:YES];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reportSuccess:) name:@"ReportSuccess" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postSuccess) name:@"PostSuccess" object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -164,6 +165,11 @@
     ContentModel *model = (ContentModel *)sender.object;
     [self.dataArr removeObject:model];
     [self.table reloadData];
+}
+
+- (void)postSuccess {
+    
+    [self loadData:YES showLoading:YES];
 }
 
 /**

@@ -161,14 +161,14 @@ static NSString *ID = @"TableCell";
     if (array == nil) {
         array = [NSMutableArray array];
     }
-    BOOL flag = NO;
+    BOOL flag = YES;
     for (NSDictionary *dict in array) {
         
         if ([dict[@"PostId"] isEqualToString:self.model.pid]) {
             NSDate *date = [NSDate dateWithTimeIntervalSince1970:[dict[@"Time"] longLongValue]];
             NSTimeInterval intervalTime = [[NSDate date] timeIntervalSinceDate:date];
-            if (intervalTime > 60*60*24) {
-                flag = YES;
+            if (intervalTime <= 60*60*24) {
+                flag = NO;
                 break;
             }
         }

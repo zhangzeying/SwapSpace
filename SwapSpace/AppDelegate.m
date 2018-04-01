@@ -19,6 +19,7 @@
 #import "AdViewController.h"
 #import "AppVersionService.h"
 #import "StatictisService.h"
+#import <Bugly/Bugly.h>
 @interface AppDelegate ()<BMKGeneralDelegate,UIAlertViewDelegate>
 {
     BMKMapManager* _mapManager;
@@ -31,6 +32,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self buildKeyWindow];
+    [Bugly startWithAppId:@"887115c689"];
     [self initBaiDuMapSDK];
     [self initShareSDK];
     // 调整SVProgressHUD的背景色和前景色
@@ -41,7 +43,10 @@
         [alert show];
         
     }];
-
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1",@"2", nil];
+    for (NSString *str in arr) {
+        [arr removeObject:str];
+    }
     [StatictisService statictisForActivation];
     NSMutableArray *array = [[CommUtils sharedInstance] getMyStickPostCache];
     NSMutableArray *tempArr = array.mutableCopy;

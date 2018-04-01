@@ -77,6 +77,13 @@
     
     self.pageIndex = 1;
     [self loadData:YES showLoading:YES];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postSuccess) name:@"PostSuccess" object:nil];
+}
+
+- (void)postSuccess {
+    
+    [self loadData:YES showLoading:YES];
 }
 
 - (void)quitBtn {

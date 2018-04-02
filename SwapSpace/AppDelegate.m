@@ -43,10 +43,6 @@
         [alert show];
         
     }];
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1",@"2", nil];
-    for (NSString *str in arr) {
-        [arr removeObject:str];
-    }
     [StatictisService statictisForActivation];
     NSMutableArray *array = [[CommUtils sharedInstance] getMyStickPostCache];
     NSMutableArray *tempArr = array.mutableCopy;

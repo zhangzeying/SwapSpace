@@ -18,7 +18,6 @@
 #import "CommUtils.h"
 #import "AdViewController.h"
 #import "AppVersionService.h"
-#import "StatictisService.h"
 #import <Bugly/Bugly.h>
 @interface AppDelegate ()<BMKGeneralDelegate,UIAlertViewDelegate>
 {
@@ -43,7 +42,6 @@
         [alert show];
         
     }];
-    [StatictisService statictisForActivation];
     NSMutableArray *array = [[CommUtils sharedInstance] getMyStickPostCache];
     NSMutableArray *tempArr = array.mutableCopy;
     for (NSDictionary *dict in tempArr) {

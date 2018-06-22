@@ -18,8 +18,8 @@
     
     NSDictionary *params = @{@"machineFlag":[SvUDIDTools UDID],
                              @"type":@"1",
-                             @"city":[LocationManage sharedInstance].locationCity,
-                             @"street":[LocationManage sharedInstance].address
+                             @"city":[LocationManage sharedInstance].locationCity?:@"",
+                             @"street":[LocationManage sharedInstance].address?:@""
                              };
     
     [[RestService sharedService] afnetworkingPost:kAPIActivation responseType:Json parameters:params completion:^(id myAfNetBlokResponeDic, BOOL flag) {

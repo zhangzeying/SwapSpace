@@ -16,7 +16,7 @@
 #import "LoginViewController.h"
 #import "CommUtils.h"
 #import "LocationManage.h"
-
+#import "StatictisService.h"
 
 @interface HomeViewController ()<TLCityPickerDelegate, UIAlertViewDelegate, UISearchBarDelegate>
 /** <##> */
@@ -92,6 +92,10 @@
             [self layoutChooseBtnFrame];
         }
     }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [StatictisService statictisForActivation];
+    });
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

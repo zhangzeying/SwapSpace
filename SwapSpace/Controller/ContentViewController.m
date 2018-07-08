@@ -137,7 +137,7 @@
     table.separatorStyle = UITableViewCellSeparatorStyleNone;
     table.delegate = self;
     table.dataSource = self;
-    table.rowHeight = 115;
+    table.rowHeight = 140;
     [self.view addSubview:table];
     self.table = table;
     

@@ -118,7 +118,7 @@ static NSString *ID = @"TableCell";
         self.priceLbl.y = self.browseCountLbl.y;
         
     }
-    self.reportBtn.frame = CGRectMake(self.imgView.x, self.imgView.bottom + 12, 130, 20);
+    self.reportBtn.frame = CGRectMake(self.imgView.x, self.imgView.bottom + 18, 130, 30);
     
 }
 
